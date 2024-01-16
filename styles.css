@@ -1,12 +1,24 @@
+@font-face {
+    font-family: 'Pixellari';
+    src: url('Fonts/pixellari-webfont.woff2') format('woff2'),
+    url('Fonts/pixellari-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+p {
+    padding-bottom: 50px;
 }
 
 body {
     margin: 0;
     font-family: 'Pixellari', sans-serif;
     color: #5F7A61;
-    font-size: 24px;   
+    font-size: 28px;   
     text-shadow: 1.5px 1.5px 2px rgba(32, 32, 32, 0.247);                                
 }
 
@@ -36,7 +48,8 @@ h1 {
     font-family: 'Pixellari', sans-serif;
     color: #5F7A61;
     font-size: 40px;  
-    padding-bottom: 15px;   
+    padding-bottom: 15px;  
+    padding-top: 50px; 
     text-shadow: 1.5px 1.5px 2px rgba(32, 32, 32, 0.247);                   
 }
 
@@ -50,7 +63,7 @@ header {
 
 .box {
     height: 25px;
-    width: 50px;
+    width: 115px;
     position: fixed;
     top: 0;
     left: 0;
@@ -61,10 +74,10 @@ header {
 
 .box2 {
     height: 25px;
-    width: 50px;
+    width: 80px;
     position: fixed;
     top: 0;
-    left: 100px;
+    left: 125px;
     padding-top: 15px;
     padding-left: 20px;
     z-index: 99 !important
@@ -72,10 +85,10 @@ header {
 
 .box3 {
     height: 25px;
-    width: 50px;
+    width: 120px;
     position: fixed;
     top: 0;
-    left: 200px;
+    left: 225px;
     padding-top: 15px;
     padding-left: 20px;
     z-index: 99 !important
@@ -97,15 +110,6 @@ header {
     margin: 0;
     font-family: 'Pixellari', sans-serif;
     color: #5F7A61;
-    font-size: 15px;     
-    text-shadow: 1.5px 1.5px 2px rgba(32, 32, 32, 0.247);   
-    text-decoration: none;
-}
-
-.animated {
-    margin: 0;
-    font-family: 'Pixellari', sans-serif;
-    color: #5F7A61;
     font-size: 28px;     
     text-shadow: 1.5px 1.5px 2px rgba(32, 32, 32, 0.247);   
     text-decoration: none;
@@ -119,11 +123,11 @@ header {
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 82%;
     height: 2px;
     bottom: 2px;
     top: 48px;
-    left: 25px;
+    left: 20px;
     background-color: #444941;
     transform: scaleX(0);
     transition: transform 0.43s ease;
@@ -131,14 +135,6 @@ header {
 
 .animated:hover::before {
     transform: scaleX(1);
-}
-
-.noanimation {
-    margin: 0;
-    font-family: 'Pixellari', sans-serif;
-    color: #5F7A61;
-    font-size: 24px;   
-    text-shadow: 1.5px 1.5px 2px rgba(32, 32, 32, 0.247);    
 }
 
 .noanimation {
@@ -159,7 +155,7 @@ header {
 }
 
 .grow {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 5px;
 }
 
@@ -178,13 +174,15 @@ header {
 .img1 {
     width: 250px;
     height: 250px;
-    padding-right: 40px;
+    margin-right: 40px;
+    border-radius: 12.5px;
 }
 
 .img2 {
     width: 250px;
     height: 250px;
-    padding-left: 40px;
+    margin-left: 40px;
+    border-radius: 12.5px;
 }
 
 section {
@@ -290,6 +288,26 @@ section {
     fill: #7FC8A9;
 }
 
+.text-link {
+    font-family: 'Pixellari', sans-serif;
+    color: #354636;
+    text-decoration: none;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+    
+    html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}
+
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
     .wave2 svg {
@@ -314,12 +332,36 @@ section {
     .img1 {
         width: 250px;
         height: 250px;
-        padding-bottom: 30px;
-        padding-left: 40px
+        margin-bottom: 30px;
+        margin-left: 40px;
+        border-radius: 12.5px;
     }  
     .img2 {
         width: 250px;
         height: 250px;
-        padding-top: 30px;
+        margin-top: 30px;
+        border-radius: 12.5px;
+    }
+    button {
+        width: 150px;
+        height: 50px;
+        border:none;
+        border:solid 4px #5F7A61;
+        border-radius: 3px;
+        background: rgba(255, 255, 255,0);
+        font-size: 25px;
+        font-family: 'Pixellari', sans-serif;;
+        color: #5F7A61;
+        text-align: center;
+        margin-left: 60px;
+        margin-bottom: 20px
+    }
+    h1 {
+        margin: 0;
+        font-family: 'Pixellari', sans-serif;
+        color: #5F7A61;
+        font-size: 30px;  
+        padding-bottom: 15px;   
+        text-shadow: 1.5px 1.5px 2px rgba(32, 32, 32, 0.247);                   
     }
 }
